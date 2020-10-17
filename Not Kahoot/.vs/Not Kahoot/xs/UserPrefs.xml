@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{83A1518E-5BB3-8198-1F15-2D084BAD9304}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Databases/MathQuestions.txt">
+    <Files>
+      <File FileName="Assets/Scripts/QuestionManager.cs" Line="11" Column="72" />
+      <File FileName="Assets/Scripts/Choice.cs" Line="9" Column="21" />
+      <File FileName="Assets/Scripts/ScoreKeeper.cs" />
+      <File FileName="Assets/Databases/MathQuestions.txt" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Not Kahoot" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Databases" expanded="True">
+                <Node name="MathQuestions.txt" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="00dea45b-7bdf-4f04-be8c-51a415927776" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
