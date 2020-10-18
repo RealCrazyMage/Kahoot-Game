@@ -1,12 +1,12 @@
 ﻿<Properties StartupConfiguration="{83A1518E-5BB3-8198-1F15-2D084BAD9304}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Timer.cs">
     <Files>
-      <File FileName="Assets/Scripts/Choice.cs" />
-      <File FileName="Assets/Scripts/ScoreKeeper.cs" Line="53" Column="124" />
-      <File FileName="Assets/Scripts/QuestionManager.cs" Line="147" Column="60" />
-      <File FileName="Assets/Scripts/Menu_Script.cs" Line="37" Column="12" />
-      <File FileName="Assets/Scripts/SceneData.cs" Line="11" Column="39" />
-      <File FileName="Assets/Databases/ScienceQuestions.txt" Line="17" Column="13" />
+      <File FileName="Assets/Scripts/Choice.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ScoreKeeper.cs" />
+      <File FileName="Assets/Scripts/QuestionManager.cs" />
+      <File FileName="Assets/Scripts/Menu_Script.cs" />
+      <File FileName="Assets/Scripts/SceneData.cs" />
+      <File FileName="Assets/Databases/ScienceQuestions.txt" />
       <File FileName="Assets/Scripts/Timer.cs" Line="38" Column="45" />
     </Files>
     <Pads>
@@ -15,9 +15,8 @@
           <Node name="Not Kahoot" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Databases" expanded="True" />
-              <Node name="Scripts" expanded="True">
-                <Node name="Timer.cs" selected="True" />
-              </Node>
+              <Node name="Scripts" expanded="True" />
+              <Node name="Sound_Effects" selected="True" />
             </Node>
           </Node>
         </State>

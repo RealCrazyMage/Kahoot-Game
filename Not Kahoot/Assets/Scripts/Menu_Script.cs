@@ -51,6 +51,10 @@ public class Menu_Script : MonoBehaviour
         SceneManager.LoadScene("Gameplay");
         FindObjectOfType<SceneData>().databaseName = subject + "Questions";
     }
+    public void reloadLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
     #endregion
 
     //Options Functions

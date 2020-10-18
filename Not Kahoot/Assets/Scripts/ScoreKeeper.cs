@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreKeeper : MonoBehaviour
 {
@@ -12,14 +13,14 @@ public class ScoreKeeper : MonoBehaviour
     static int questionsIncorrect = 0;
 
     static Text scoreText;
-    static GameObject EndScreen;
-    static Text[] EndScreenStats = new Text[4];
+    static GameObject endScreen;
+    static Text[] endScreenStats = new Text[4];
     // Start is called before the first frame update
     void Start()
     {
         scoreText = GetComponent<Text>();
-        EndScreen = GameObject.Find("EndScreen");
-        EndScreenStats = EndScreen.GetComponentsInChildren<Text>();
+        endScreen = GameObject.Find("EndScreen");
+        endScreenStats = endScreen.GetComponentsInChildren<Text>();
     }
 
     // Update is called once per frame
@@ -47,14 +48,20 @@ public class ScoreKeeper : MonoBehaviour
         }
         //UI updates:
         scoreText.text = "Score: " + score;
-        EndScreenStats[0].text = "Score:\n" + score;
+        endScreenStats[0].text = "Score:\n" + score;
         //TODO: implement high score dispay on end results
-        EndScreenStats[2].text = "Answers:\n" + (questionsIncorrect + questionsCorrect);
-        EndScreenStats[3].text = "Accuracy:\n" + 100.0f * questionsCorrect / (questionsIncorrect + questionsCorrect) + "%";
+        endScreenStats[1].text = "Answers:\n" + (questionsIncorrect + questionsCorrect);
+        endScreenStats[2].text = "Accuracy:\n" + Mathf.Round(100.0f * questionsCorrect / (questionsIncorrect + questionsCorrect)) + "%";
     }
     //TODO: display final score
     public static void DisplayFinalScore()
     {
-        EndScreen.GetComponent<CanvasGroup>().alpha = 1;
+        CanvasGroup canvasGroup = endScreen.GetComponent<CanvasGroup>();
+        canvasGroup.alpha = 1;
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
+        score = 0;
+        questionsCorrect = 0;
+        questionsIncorrect = 0;
     }
 }

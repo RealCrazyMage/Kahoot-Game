@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class Choice : MonoBehaviour
 {
+    [SerializeField] AudioClip[] clips;
+    AudioSource audioSource;
+
     bool isCorrect;
     string text = "";
     Text displayText;
@@ -12,6 +15,7 @@ public class Choice : MonoBehaviour
     //called just before Start()
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         //initializes the Text component on the choice
         displayText = GetComponentInChildren<Text>();
         UpdateText();
@@ -19,7 +23,8 @@ public class Choice : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        print("Correct sfx: " + clips[0]);
+        print("Incorrect sfx: " + clips[1]);
     }
 
     // Update is called once per frame
@@ -59,6 +64,16 @@ public class Choice : MonoBehaviour
     public void ChoiceSelected()
     {
         ScoreKeeper.UpdateScore(isCorrect);
+        //play appropriate sound effect
+        if (isCorrect)
+        {
+            audioSource.PlayOneShot(clips[0]);
+        }
+        else
+        {
+            audioSource.PlayOneShot(clips[1]);
+        }
+
         FindObjectOfType<QuestionManager>().NewQuestion();
     }
 
