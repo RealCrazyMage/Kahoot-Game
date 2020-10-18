@@ -44,14 +44,14 @@ public class Choice : MonoBehaviour
     {
         isCorrect = correct;
         //test code so I can determine which one is correct even though the question is nonsense
-        if (correct)
-        {
-            GetComponent<Image>().color = Color.green;
-        }
-        else
-        {
-            GetComponent<Image>().color = Color.white;
-        }
+        //if (correct)
+        //{
+        //    GetComponent<Image>().color = Color.green;
+        //}
+        //else
+        //{
+        //    GetComponent<Image>().color = Color.white;
+        //}
     }
 
     //updates the UI to display the value stored in text
