@@ -8,11 +8,10 @@ public class Menu_Script : MonoBehaviour
     /*
      * TODO: Sound effects when a button is clicked
      */
-    public AudioSource auditore;
+    AudioSource auditore;
     private void Start()
     {
-        auditore = GetComponent<AudioSource>();
-        auditore.Play();
+        auditore = FindObjectOfType<SceneData>().GetComponent<AudioSource>();
     }
 
     // Start Menu Functions

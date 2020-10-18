@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class ScoreKeeper : MonoBehaviour
 {
-    static int score;
+    static int highScore = 0;
+    static int score = 0;
     static int correctReward = 2;
     static int incorrectPenalty = 1;
     static int questionsCorrect = 0;
@@ -21,6 +22,7 @@ public class ScoreKeeper : MonoBehaviour
         scoreText = GetComponent<Text>();
         endScreen = GameObject.Find("EndScreen");
         endScreenStats = endScreen.GetComponentsInChildren<Text>();
+        UpdateEndScreen();
     }
 
     // Update is called once per frame
@@ -47,15 +49,35 @@ public class ScoreKeeper : MonoBehaviour
             }
         }
         //UI updates:
+        UpdateEndScreen();
+    }
+
+    private static void UpdateEndScreen()
+    {
         scoreText.text = "Score: " + score;
         endScreenStats[0].text = "Score:\n" + score;
-        //TODO: implement high score dispay on end results
-        endScreenStats[1].text = "Answers:\n" + (questionsIncorrect + questionsCorrect);
-        endScreenStats[2].text = "Accuracy:\n" + Mathf.Round(100.0f * questionsCorrect / (questionsIncorrect + questionsCorrect)) + "%";
+        endScreenStats[1].text = "High Score:\n" + highScore;
+        endScreenStats[2].text = "Answers:\n" + (questionsIncorrect + questionsCorrect);
+        if(questionsIncorrect == 0 && questionsCorrect == 0) //you did literally nothing what is wrong with you
+        {
+            endScreenStats[3].text = "Accuracy:\n0%"; 
+        }
+        else
+        {
+            endScreenStats[3].text = "Accuracy:\n" + Mathf.Round(100.0f * questionsCorrect / (questionsIncorrect + questionsCorrect)) + "%";
+
+        }
     }
+
     //TODO: display final score
     public static void DisplayFinalScore()
     {
+        if(score > highScore)
+        {
+            highScore = score;
+        }
+        UpdateEndScreen();
+
         CanvasGroup canvasGroup = endScreen.GetComponent<CanvasGroup>();
         canvasGroup.alpha = 1;
         canvasGroup.interactable = true;

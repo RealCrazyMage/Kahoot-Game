@@ -30,12 +30,16 @@ public class Timer : MonoBehaviour
         {
             timeIsUp = true;
             DisableButtons();
+            print(GameObject.Find("Question").GetComponent<Image>().color);
+            print(new Color(56, 56, 56, 128));
+            GameObject.Find("Question").GetComponent<Image>().color = new Color((float)150/255, (float)150/255, (float)150/255, (float)150/255);
             ScoreKeeper.DisplayFinalScore();
             timerText.text = "time: 0";
             return;
         }
         timeLeft -= Time.deltaTime;
-        timerText.text = timeLeft.ToString();
+        int timeInt = (int)timeLeft + 1;
+        timerText.text = "time: " + timeInt.ToString();
         
     }
 

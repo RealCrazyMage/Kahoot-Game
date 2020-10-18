@@ -23,8 +23,7 @@ public class Choice : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        print("Correct sfx: " + clips[0]);
-        print("Incorrect sfx: " + clips[1]);
+
     }
 
     // Update is called once per frame
