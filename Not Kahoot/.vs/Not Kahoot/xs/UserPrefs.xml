@@ -1,18 +1,22 @@
 ﻿<Properties StartupConfiguration="{83A1518E-5BB3-8198-1F15-2D084BAD9304}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Databases/MathQuestions.txt">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Timer.cs">
     <Files>
-      <File FileName="Assets/Scripts/QuestionManager.cs" Line="11" Column="72" />
-      <File FileName="Assets/Scripts/Choice.cs" Line="9" Column="21" />
-      <File FileName="Assets/Scripts/ScoreKeeper.cs" />
-      <File FileName="Assets/Databases/MathQuestions.txt" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Choice.cs" />
+      <File FileName="Assets/Scripts/ScoreKeeper.cs" Line="53" Column="124" />
+      <File FileName="Assets/Scripts/QuestionManager.cs" Line="147" Column="60" />
+      <File FileName="Assets/Scripts/Menu_Script.cs" Line="37" Column="12" />
+      <File FileName="Assets/Scripts/SceneData.cs" Line="11" Column="39" />
+      <File FileName="Assets/Databases/ScienceQuestions.txt" Line="17" Column="13" />
+      <File FileName="Assets/Scripts/Timer.cs" Line="38" Column="45" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Not Kahoot" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Databases" expanded="True">
-                <Node name="MathQuestions.txt" selected="True" />
+              <Node name="Databases" expanded="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="Timer.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -22,7 +26,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="00dea45b-7bdf-4f04-be8c-51a415927776" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d87c3ec9-eabd-4111-9c10-4aeca1461c94" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

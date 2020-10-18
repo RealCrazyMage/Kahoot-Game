@@ -30,11 +30,7 @@ public class QuestionManager : MonoBehaviour
     void Start()
     {
         problems = new List<string>();
-
-        //temporary code, eventually problems should be set via a menu and SetDatabase().
-        string baseName = "MathQuestions";
-        SetDatabase(baseName);
-        NewQuestion(); 
+        SetDatabase(FindObjectOfType<SceneData>().databaseName, true);
     }
 
     // Update is called once per frame
@@ -71,7 +67,7 @@ public class QuestionManager : MonoBehaviour
             Debug.LogWarning("We need to reset the problem list because you got " +
                 "through all of the problems in one game. Please add more problems " +
                 "to the database so this doesn't happen in the future");
-            SetDatabase(databaseName);
+            SetDatabase(databaseName, false);
         }
     }
 
@@ -129,16 +125,26 @@ public class QuestionManager : MonoBehaviour
     {
         int lines = 0; //there is no newline before the first line, so it starts at 1 to account for that.
         string currentProblem = "";
+        bool currentProblemHasCorrectAnswer = false;
         foreach (char c in database)
         {
             currentProblem += c;
+            if(c == '*')
+            {
+                currentProblemHasCorrectAnswer = true;
+            }
             if (c == '\n')
             {
                 lines++;
                 if (lines == 5) //end of problem
                 {
+                    if (!currentProblemHasCorrectAnswer)
+                    {
+                        Debug.LogError("No correct answer is indicated in the following problem:\n" + currentProblem);
+                    }
                     problems.Add(currentProblem);
                     currentProblem = "";
+                    currentProblemHasCorrectAnswer = false;
                     lines = 0;
                 }
             }
@@ -154,7 +160,7 @@ public class QuestionManager : MonoBehaviour
         }
     }
 
-    public void SetDatabase(string nameOfDatabase)
+    public void SetDatabase(string nameOfDatabase, bool firstSetup)
     {
         //only needed in the event that we need to repopulate the problems list
         databaseName = nameOfDatabase;
@@ -171,6 +177,10 @@ public class QuestionManager : MonoBehaviour
         if (!foundDatabase)
         {
             Debug.LogError("No databases in QuestionManager have the name " + databaseName);
+        }
+        if (firstSetup)
+        {
+            NewQuestion();
         }
     }
 }

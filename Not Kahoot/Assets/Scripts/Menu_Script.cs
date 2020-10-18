@@ -35,22 +35,11 @@ public class Menu_Script : MonoBehaviour
 
     //Level Functions
     #region
-    public void goto_math()
+    public void goto_gameplay(string subject)
     {
-        Debug.Log("Goto Math");
-        SceneManager.LoadScene("SampleScene");
-    }
-
-    public void goto_grammar()
-    {
-        Debug.Log("Goto Grammar");
-        SceneManager.LoadScene("GrammarScene");
-    }
-
-    public void goto_science()
-    {
-        Debug.Log("Goto Science");
-        SceneManager.LoadScene("ScienceScene");
+        Debug.Log("Goto " + subject);
+        SceneManager.LoadScene("Gameplay");
+        FindObjectOfType<SceneData>().databaseName = subject + "Questions";
     }
     #endregion
 

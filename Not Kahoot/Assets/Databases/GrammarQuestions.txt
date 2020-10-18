@@ -1,0 +1,20 @@
+What part of speech is the word "cat"?
+noun*
+verb
+adjective
+adverb
+What is the plural form of goose?
+gooses
+geese*
+goosen
+goose's
+What part of speech is the word "and"
+adjective
+contraction*
+verb
+noun
+Which sentence has correct capitalization and punctuation?
+Sally went to the store.*
+sally went to the store.
+Sally went to the store
+Sally went, to the store.

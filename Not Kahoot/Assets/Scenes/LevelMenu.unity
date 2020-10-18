@@ -352,14 +352,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1727604960}
         m_TargetAssemblyTypeName: Menu_Script, Assembly-CSharp
-        m_MethodName: goto_grammar
-        m_Mode: 1
+        m_MethodName: goto_gameplay
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Grammar
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &320633028
@@ -883,14 +883,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1727604960}
         m_TargetAssemblyTypeName: Menu_Script, Assembly-CSharp
-        m_MethodName: goto_math
-        m_Mode: 1
+        m_MethodName: goto_gameplay
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Math
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1316792659
@@ -1263,14 +1263,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1727604960}
         m_TargetAssemblyTypeName: Menu_Script, Assembly-CSharp
-        m_MethodName: goto_science
-        m_Mode: 1
+        m_MethodName: goto_gameplay
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Science
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1920420600
